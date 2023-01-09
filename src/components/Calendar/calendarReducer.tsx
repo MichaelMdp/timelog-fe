@@ -44,6 +44,7 @@ export enum ReducerActionType {
   SUBMIT_EDIT_ENTRY,
   DELETE_ENTRY,
   UPDATE_FIELD,
+  RESET_DATA
 }
 
 export type AddNewEntryAction = {
@@ -74,13 +75,19 @@ export type UpdateFieldAction = {
   payload: FieldData;
 };
 
+export type ResetDataAction = {
+  type: ReducerActionType.RESET_DATA;
+  payload: WorkEntry[]
+};
+
 export type ReducerAction =
   | AddNewEntryAction
   | EditEntryAction
   | CancelEntryAction
   | SubmitEntryAction
   | DeleteEntryAction
-  | UpdateFieldAction;
+  | UpdateFieldAction
+  | ResetDataAction;
 
 // reducer
 export const calendarReducer: Reducer<calendarState, ReducerAction> = (
@@ -174,7 +181,6 @@ export const calendarReducer: Reducer<calendarState, ReducerAction> = (
         },
       };
     case ReducerActionType.UPDATE_FIELD: {
-      console.log(action.payload);
       return {
         ...state,
         modalState: {
@@ -183,7 +189,14 @@ export const calendarReducer: Reducer<calendarState, ReducerAction> = (
         },
       };
     }
+    case ReducerActionType.RESET_DATA: {
+      LocalStorageUtil.storeEntries(action.payload);
 
+      return {
+        ...state,
+        entries: action.payload
+      }
+    }
     default:
       throw new Error();
   }

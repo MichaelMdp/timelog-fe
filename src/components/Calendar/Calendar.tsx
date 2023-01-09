@@ -6,6 +6,7 @@ import {
   calendarReducer,
   calendarState,
   ReducerAction,
+  ReducerActionType,
 } from "./calendarReducer";
 import Day from "../Day";
 import EntryForm from "../EntryForm/EntryForm";
@@ -18,8 +19,8 @@ import LocalStorageUtil from "../../Util/localStorageUtil";
 
 let storedEntries = LocalStorageUtil.getEntries();
 if (!storedEntries) {
-  storedEntries = mockWorkEntries;
-  LocalStorageUtil.storeEntries(mockWorkEntries);
+  storedEntries = mockWorkEntries();
+  LocalStorageUtil.storeEntries(storedEntries);
 }
 
 const initialState: calendarState = {
@@ -43,6 +44,13 @@ export default function Calendar() {
   // reducer
   const [state, dispatch] = useReducer(calendarReducer, initialState);
   const [week, setWeek] = useState(moment());
+
+  const reset = () => {
+    dispatch({
+      type: ReducerActionType.RESET_DATA,
+      payload: mockWorkEntries()
+    })
+  }
 
   const getDays = (startDate: moment.Moment): Array<JSX.Element> => {
     const firstDayOfWeek = startDate.subtract(1, "d").startOf("week");
@@ -69,7 +77,7 @@ export default function Calendar() {
     <>
       <CalendarDispatchContext.Provider value={dispatch}>
         <CalendarContext.Provider value={state}>
-          <CalendarControls week={week} setWeek={setWeek} />
+          <CalendarControls week={week} setWeek={setWeek} reset={reset} />
           <Stack
             direction={"row"}
             justifyContent="space-between"

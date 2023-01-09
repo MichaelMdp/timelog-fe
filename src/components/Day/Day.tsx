@@ -21,6 +21,9 @@ type Props = {
 export function Day({ title, date, entries }: Props) {
   const dispatch = useContext(CalendarDispatchContext);
 
+  const START_HOUR = 8;
+  const END_HOUR = 19;
+
   const blockHeight = 48;
   const blockPadding = 8;
 
@@ -41,7 +44,7 @@ export function Day({ title, date, entries }: Props) {
 
   const timeBlockListItems = () => {
     const timeBlocks = [];
-    for (let i = 8; i <= 19; i++) {
+    for (let i = START_HOUR; i <= END_HOUR; i++) {
       timeBlocks.push(i);
     }
     return timeBlocks.map((t) => {

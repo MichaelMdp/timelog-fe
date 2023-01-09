@@ -7,8 +7,6 @@ import {
   Typography,
 } from "@mui/material";
 import ScheduleIcon from "@mui/icons-material/Schedule";
-import { Rowing } from "@mui/icons-material";
-import { display } from "@mui/system";
 
 type Props = {
   children?: React.ReactNode;
@@ -36,9 +34,9 @@ export default function Header({ children }: Props) {
             </Typography>
           </Box>
           <Box>
-            <Button sx={{ color: "inherit" }}>Clients</Button>
+            <Button sx={{ color: "inherit" }}>Projects</Button>
             {/* <Button sx={{ color: "inherit" }}>menu 2</Button> */}
-          </Box>
+            </Box>
         </Toolbar>
       </Container>
     </AppBar>
