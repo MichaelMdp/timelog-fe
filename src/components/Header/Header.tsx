@@ -16,7 +16,10 @@ export default function Header({ children }: Props) {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{display: "flex", justifyContent: "space-between"}}>
+        <Toolbar
+          disableGutters
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
           <Box>
             <ScheduleIcon sx={{ mr: 2 }} />
             <Typography
@@ -36,7 +39,7 @@ export default function Header({ children }: Props) {
           <Box>
             <Button sx={{ color: "inherit" }}>Projects</Button>
             {/* <Button sx={{ color: "inherit" }}>menu 2</Button> */}
-            </Box>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
