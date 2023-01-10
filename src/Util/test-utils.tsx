@@ -45,8 +45,17 @@ const renderWithAllProviders = (
   options?: Omit<RenderOptions, "wrapper">
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 
+
+const renderWithDispatchContext = (component: React.ReactElement, dispatch:(value: ReducerAction) => void) => {
+  render(
+    <CalendarDispatchContext.Provider value={dispatch}>
+      {component}
+    </CalendarDispatchContext.Provider>
+  );
+};
+
 // re-export everything
 export * from "@testing-library/react";
 
 // override render method
-export { renderWithAllProviders };
+export { renderWithAllProviders, renderWithDispatchContext };

@@ -3,20 +3,15 @@ import Day from "../.";
 import mockWorkEntries from "../../../data/mockedEntries";
 import { it, beforeEach, vi } from "vitest";
 import { ReducerAction } from "../../Calendar/calendarReducer";
-import { CalendarDispatchContext, ReducerActionType } from "../../Calendar";
+import { ReducerActionType } from "../../Calendar";
+import { renderWithDispatchContext } from "../../../Util/test-utils";
 
 // mocked dispatch
 const dispatchImplementation = (value: ReducerAction) => {};
 const mockedDispatch = vi.fn(dispatchImplementation);
 
 // Provider wrapped
-const renderWithProviders = (component: React.ReactElement) => {
-  return render(
-    <CalendarDispatchContext.Provider value={mockedDispatch}>
-      {component}
-    </CalendarDispatchContext.Provider>
-  );
-};
+const renderWithProviders = (component: React.ReactElement) =>  renderWithDispatchContext(component, mockedDispatch)
 
 const entriesMock = mockWorkEntries();
 const startDate = entriesMock[0].startTime;
