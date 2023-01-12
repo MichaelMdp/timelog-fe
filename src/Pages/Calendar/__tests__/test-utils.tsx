@@ -3,14 +3,14 @@ import { render, RenderOptions } from "@testing-library/react";
 import {
   CalendarContext,
   CalendarDispatchContext,
-  calendarReducer,
-} from "../Pages/Calendar";
+} from "../Calendar";
 import {
   calendarState,
   ReducerAction,
-} from "../Pages/Calendar/calendarReducer";
+  calendarReducer
+} from "../calendarReducer";
 import moment from "moment";
-import mockWorkEntries from "../data/mockedEntries";
+import mockWorkEntries from "../../../data/mockedEntries";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 

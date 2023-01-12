@@ -3,7 +3,7 @@ import Day from "../Day";
 import mockWorkEntries from "../../../data/mockedEntries";
 import { it, beforeEach, vi } from "vitest";
 import { ReducerAction, ReducerActionType } from "../calendarReducer";
-import { renderWithDispatchContext } from "../../../Util/test-utils";
+import { renderWithDispatchContext } from "./test-utils";
 
 // mocked dispatch
 const dispatchImplementation = (value: ReducerAction) => {};
