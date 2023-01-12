@@ -4,11 +4,11 @@ import {
   CalendarContext,
   CalendarDispatchContext,
   calendarReducer,
-} from "../components/Calendar";
+} from "../Pages/Calendar";
 import {
   calendarState,
   ReducerAction,
-} from "../components/Calendar/calendarReducer";
+} from "../Pages/Calendar/calendarReducer";
 import moment from "moment";
 import mockWorkEntries from "../data/mockedEntries";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";

@@ -1,5 +1,5 @@
 import moment from "moment";
-import { WorkEntry } from "../components/Calendar/calendarReducer";
+import { WorkEntry } from "../Pages/Calendar/calendarReducer";
 import firstDayOfTheWeek from "../Util/dateUtil";
 
 

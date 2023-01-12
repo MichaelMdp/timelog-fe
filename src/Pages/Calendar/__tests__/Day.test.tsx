@@ -1,9 +1,8 @@
 import { screen, render, fireEvent } from "@testing-library/react";
-import Day from "../.";
+import Day from "../Day";
 import mockWorkEntries from "../../../data/mockedEntries";
 import { it, beforeEach, vi } from "vitest";
-import { ReducerAction } from "../../Calendar/calendarReducer";
-import { ReducerActionType } from "../../Calendar";
+import { ReducerAction, ReducerActionType } from "../calendarReducer";
 import { renderWithDispatchContext } from "../../../Util/test-utils";
 
 // mocked dispatch

@@ -8,8 +8,8 @@ import {
   ReducerAction,
   ReducerActionType,
 } from "./calendarReducer";
-import Day from "../Day";
-import EntryForm from "../EntryForm/EntryForm";
+import Day from "./Day";
+import EntryForm from "./EntryForm";
 
 import mockWorkEntries from "../../data/mockedEntries";
 import { CalendarControls } from "./CalendarControls";

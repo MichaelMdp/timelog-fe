@@ -9,7 +9,8 @@ import {
 } from "@mui/material";
 import moment, { Moment } from "moment";
 
-import { CalendarDispatchContext, ReducerActionType, WorkEntry } from "../Calendar";
+import { ReducerActionType, WorkEntry } from "./calendarReducer";
+import { CalendarDispatchContext } from "./Calendar";
 import Entry from "./Entry";
 
 type Props = {
@@ -18,7 +19,7 @@ type Props = {
   entries: WorkEntry[];
 };
 
-export function Day({ title, date, entries }: Props) {
+export default function Day({ title, date, entries }: Props) {
   const dispatch = useContext(CalendarDispatchContext);
 
   const START_HOUR = 8;

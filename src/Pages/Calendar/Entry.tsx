@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { useContext } from "react";
-import { CalendarDispatchContext } from "../Calendar/Calendar";
-import { ReducerActionType, WorkEntry } from "../Calendar/calendarReducer";
+import { CalendarDispatchContext } from "../../Pages/Calendar/Calendar";
+import { ReducerActionType, WorkEntry } from "../../Pages/Calendar/calendarReducer";
 
 type Props = {
   entry: WorkEntry;

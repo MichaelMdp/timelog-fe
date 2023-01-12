@@ -3,7 +3,7 @@ import { fireEvent, screen } from "@testing-library/react";
 import { vi } from "vitest";
 import Entry from "../Entry";
 import mockWorkEntries from "../../../data/mockedEntries";
-import { ReducerAction } from "../../Calendar/calendarReducer";
+import { ReducerAction } from "../../../Pages/Calendar/calendarReducer";
 import { renderWithDispatchContext } from "../../../Util/test-utils";
 
 // mocked dispatch

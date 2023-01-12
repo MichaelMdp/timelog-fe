@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
-import Header from "../Header/Header";
-import Calendar from "../Calendar/Calendar";
+import Header from "../components/Header";
+import Calendar from "../Pages/Calendar/Calendar";
 
 type Props = {
   children?: React.ReactNode;

@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { it, beforeEach, vi } from "vitest";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-import Calendar from "../../Calendar";
+import Calendar from "..";
 import { UserEvent } from "@testing-library/user-event/dist/types/setup/setup";
 
 describe("Calendar", () => {

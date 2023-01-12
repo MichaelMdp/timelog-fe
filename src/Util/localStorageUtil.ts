@@ -1,5 +1,5 @@
 import moment from "moment";
-import { WorkEntry } from "../components/Calendar";
+import { WorkEntry } from "../Pages/Calendar";
 
 export default class LocalStorageUtil {
   private static LOCALSTORAGE_KEY = "entries";

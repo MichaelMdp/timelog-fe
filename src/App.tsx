@@ -1,6 +1,6 @@
 import "./App.css";
-import Layout from "./components/Layout/Layout";
-import Calendar from "./components/Calendar";
+import Layout from "./Layout/Layout";
+import Calendar from "./Pages/Calendar";
 
 function App() {
   return (

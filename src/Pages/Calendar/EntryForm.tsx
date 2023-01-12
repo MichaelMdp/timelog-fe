@@ -24,8 +24,8 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import DeleteIcon from '@mui/icons-material/Delete';
 import moment, { Moment } from "moment";
 // custom stuff
-import { ReducerActionType } from "../Calendar/calendarReducer";
-import { CalendarContext, CalendarDispatchContext } from "../Calendar/Calendar";
+import { ReducerActionType } from "./calendarReducer";
+import { CalendarContext, CalendarDispatchContext } from "./Calendar";
 
 type Props = {};
 
